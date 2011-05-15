@@ -1,0 +1,19 @@
+<h1>Indtast arbejdsseddeler</h1>
+
+<h2>Seneste arbejdsseddeler</h2>
+
+{% if latest_arbejdsseddel_list %}
+    <ul>
+    {% for arbejdsseddel in latest_arbejdsseddel_list %}
+        <li><a href="/testPeter2/{{ arbejdsseddel.id }}/">
+   Dato: <b>{{ arbejdsseddel.dato }}</b>
+   Debitor: <b>{{ arbejdsseddel.debitor }}</b>
+   CPR: <b>{{ arbejdsseddel.cpr }}</b>
+        </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Ingen arbejdssedler til stede.</p>
+{% endif %}
+
+<h2>Indtast arbejdsseddel</h2>

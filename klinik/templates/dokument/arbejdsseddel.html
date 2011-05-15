@@ -1,0 +1,12 @@
+<h1>Indtast arbejdsseddel</h1>
+
+
+<form action="/testPeter2/{{ arb.id }}/gem/" method="post">
+{% csrf_token %}
+{{ arb.as_p }}
+{{ arb.debitor.as_p }}
+{{ arb.reference.as_p }}
+{{ arb.patient.as_p }}
+{{ arb.kommentar.as_p }}
+<input type="submit" value="Gem" />
+</form>
